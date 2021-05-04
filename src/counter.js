@@ -8,7 +8,7 @@ export default function Counter() {
     firebase.firestore().collection("results").onSnapshot((querySnapshot) => {
       setResults(querySnapshot.docs)
     })
-  })
+  }, [])
 
   return (
     <div>
