@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { subscribe }           from "./realtime_storage"
-import Button                  from "./button"
+import AddButton               from "./add_button"
 
 export default function Counter() {
   const [ matchResults, setMatchResults ] = useState([])
@@ -13,9 +13,9 @@ export default function Counter() {
         { matchResults.length }
       </p>
       <p>
-        <Button matchResult="win"  />
-        <Button matchResult="lose" />
-        <Button matchResult="draw" />
+        <AddButton matchResult="win"  />
+        <AddButton matchResult="lose" />
+        <AddButton matchResult="draw" />
       </p>
     </div>
   )

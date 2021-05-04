@@ -1,6 +1,6 @@
 import { add } from "./realtime_storage"
 
-export default function Button(props) {
+export default function AddButton(props) {
   const matchResult = props.matchResult
   return (
     <button onClick={() => { add(matchResult) }}>
