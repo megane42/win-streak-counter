@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { subscribe }           from "./realtime_storage"
 import AddButton               from "./add_button"
 import WinStreak               from "./win_streak"
+import History                 from "./history"
 import Stats                   from "./stats"
 
 export default function Counter() {
@@ -11,8 +12,9 @@ export default function Counter() {
 
   return (
     <div>
-      <WinStreak matchResults={matchResults} />
       <Stats     matchResults={matchResults} />
+      <History   matchResults={matchResults} numOfHistory={5} />
+      <WinStreak matchResults={matchResults} />
       <p>
         <AddButton matchResult="win"  />
         <AddButton matchResult="lose" />
