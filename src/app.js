@@ -1,7 +1,9 @@
+import Counter from "./counter"
+
 export default function App() {
   return (
     <div>
-      foo
+      <Counter />
     </div>
   )
 }
