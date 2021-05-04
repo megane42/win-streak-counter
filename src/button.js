@@ -1,9 +1,10 @@
 import { add } from "./realtime_storage"
 
 export default function Button(props) {
+  const matchResult = props.matchResult
   return (
-    <button onClick={() => { add(props.result) }} value={props.result}>
-      {props.result}
+    <button onClick={() => { add(matchResult) }}>
+      {matchResult}
     </button>
   )
 }

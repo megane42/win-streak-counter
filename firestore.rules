@@ -1,10 +1,10 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /results/{result_id} {
+    match /matchResults/{matchResultId} {
       allow read:  if true;
       allow delete: if true;
-      allow create: if request.resource.data.keys().hasOnly(["result", "created_at"]);
+      allow create: if request.resource.data.keys().hasOnly(["matchResult", "createdAt"]);
     }
   }
 }

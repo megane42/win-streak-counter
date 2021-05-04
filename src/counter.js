@@ -3,19 +3,19 @@ import { subscribe }           from "./realtime_storage"
 import Button                  from "./button"
 
 export default function Counter() {
-  const [ results, setResults ] = useState([])
+  const [ matchResults, setMatchResults ] = useState([])
 
-  useEffect(() => { subscribe(setResults) }, [])
+  useEffect(() => { subscribe(setMatchResults) }, [])
 
   return (
     <div>
       <p>
-        { results.length }
+        { matchResults.length }
       </p>
       <p>
-        <Button result="win"  />
-        <Button result="lose" />
-        <Button result="draw" />
+        <Button matchResult="win"  />
+        <Button matchResult="lose" />
+        <Button matchResult="draw" />
       </p>
     </div>
   )

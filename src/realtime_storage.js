@@ -1,19 +1,19 @@
 import firebase from "./firebase"
 
-const collection = firebase.firestore().collection("results")
+const collection = firebase.firestore().collection("matchResults")
 
 export const subscribe = (handler) => {
   collection
-    .orderBy("created_at", "desc")
+    .orderBy("createdAt", "desc")
     .onSnapshot((querySnapshot) => {
       handler(querySnapshot.docs)
     })
 }
 
-export const add = (result) => {
+export const add = (matchResult) => {
   collection
     .add({
-      result: result,
-      created_at: firebase.firestore.Timestamp.now(),
+      matchResult: matchResult,
+      createdAt: firebase.firestore.Timestamp.now(),
     })
 }
