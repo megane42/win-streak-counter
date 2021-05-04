@@ -10,9 +10,27 @@ export default function Counter() {
     })
   }, [])
 
+  const addRecord = (result) => {
+    firebase.firestore().collection("results").add({
+      result: result,
+      created_at: firebase.firestore.Timestamp.now(),
+    })
+  }
+
+  const winHandler  = () => { addRecord("win")  }
+  const loseHandler = () => { addRecord("lose") }
+  const drawHandler = () => { addRecord("draw") }
+
   return (
     <div>
-      { results.length }
+      <p>
+        { results.length }
+      </p>
+      <p>
+        <button onClick={winHandler}>win</button>
+        <button onClick={loseHandler}>lose</button>
+        <button onClick={drawHandler}>draw</button>
+      </p>
     </div>
   )
 }
