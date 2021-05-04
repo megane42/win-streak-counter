@@ -6,7 +6,14 @@ export const subscribe = (handler) => {
   collection
     .orderBy("createdAt", "desc")
     .onSnapshot((querySnapshot) => {
-      handler(querySnapshot.docs)
+      handler(
+        querySnapshot.docs.map((x) => {
+          return {
+            matchResult: x.data().matchResult,
+            createdAt:   x.data().createdAt,
+          }
+        })
+      )
     })
 }
 
