@@ -1,15 +1,8 @@
-import firebase from "./firebase"
-
-const addRecord = (e) => {
-  firebase.firestore().collection("results").add({
-    result: e.target.value,
-    created_at: firebase.firestore.Timestamp.now(),
-  })
-}
+import { add } from "./realtime_storage"
 
 export default function Button(props) {
   return (
-    <button onClick={addRecord} value={props.result}>
+    <button onClick={() => { add(props.result) }} value={props.result}>
       {props.result}
     </button>
   )

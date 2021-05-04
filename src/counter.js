@@ -1,15 +1,11 @@
 import { useState, useEffect } from 'react'
-import firebase from "./firebase"
-import Button   from "./button"
+import { subscribe }           from "./realtime_storage"
+import Button                  from "./button"
 
 export default function Counter() {
   const [ results, setResults ] = useState([])
 
-  useEffect(() => {
-    firebase.firestore().collection("results").orderBy("created_at", "desc").onSnapshot((querySnapshot) => {
-      setResults(querySnapshot.docs)
-    })
-  }, [])
+  useEffect(() => { subscribe(setResults) }, [])
 
   return (
     <div>
