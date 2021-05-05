@@ -11,5 +11,5 @@
 
 .historyItem:not(:first-child)::after {
     content: ">";
-    margin: 0 0.2em;
+    margin: 0 0.1em;
 }

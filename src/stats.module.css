@@ -1,11 +1,14 @@
 .win {
-    color: var(--color-win)
+    color: var(--color-win);
+    margin: 0 0.1em;
 }
 
 .lose {
-    color: var(--color-lose)
+    color: var(--color-lose);
+    margin: 0 0.1em;
 }
 
 .draw {
-    color: var(--color-draw)
+    color: var(--color-draw);
+    margin: 0 0.1em;
 }

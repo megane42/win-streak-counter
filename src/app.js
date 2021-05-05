@@ -18,14 +18,14 @@ export default function App() {
           <div className={styles.winStreak}>
             <WinStreak matchResults={matchResults} />
           </div>
-          <div className={styles.stats}>
-            <Stats matchResults={matchResults} />
-          </div>
         </div>
 
         <div className={styles.row}>
-          <div className={styles.stats}>
+          <div className={styles.history}>
             <History matchResults={matchResults} numOfHistory={5} />
+          </div>
+          <div className={styles.stats}>
+            <Stats matchResults={matchResults} />
           </div>
         </div>
       </div>
