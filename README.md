@@ -1,4 +1,4 @@
-# twitch-result-counter
+# Win Streak Counter - A Widget for Streaming
 
 ## Requirements
 
