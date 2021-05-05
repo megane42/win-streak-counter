@@ -2,6 +2,10 @@
     display: flex;
 }
 
+.historyAndStats {
+    font-size: 0.6em;
+}
+
 .history {
     margin-right: 0.2em;
 }
