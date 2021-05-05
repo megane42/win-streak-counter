@@ -1,3 +1,5 @@
+import styles from './stats.module.css'
+
 export default function Stats(props) {
   const numOfWin = (matchResults) => {
     return matchResults.reduce((num, x) => {
@@ -20,15 +22,15 @@ export default function Stats(props) {
   return (
     <div>
       (
-      <span>
+      <span className={styles.win}>
         {numOfWin(props.matchResults)}
       </span>
       -
-      <span>
+      <span className={styles.lose}>
         {numOfLose(props.matchResults)}
       </span>
       -
-      <span>
+      <span className={styles.draw}>
         {numOfDraw(props.matchResults)}
       </span>
       )

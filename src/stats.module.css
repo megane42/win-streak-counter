@@ -1,0 +1,11 @@
+.win {
+    color: var(--color-win)
+}
+
+.lose {
+    color: var(--color-lose)
+}
+
+.draw {
+    color: var(--color-draw)
+}

@@ -6,3 +6,9 @@
     font-size: 4em;
     font-style: oblique;
 }
+
+html {
+    --color-win:  #66BB66;
+    --color-lose: #BB6666;
+    --color-draw: #6666BB;
+}
