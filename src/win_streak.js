@@ -1,4 +1,4 @@
-import styles  from "./win_streak.module.css"
+// import styles  from "./win_streak.module.css"
 
 const calcStreak = (matchResults) => {
   let streak = 0

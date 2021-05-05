@@ -29,6 +29,7 @@ export default function History(props) {
           </li>
         )
         break
+      default:
     }
   }
 
