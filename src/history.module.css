@@ -1,6 +1,8 @@
 .history {
     display: flex;
     flex-direction: row-reverse;
+    margin: 0;
+    padding: 0;
 }
 
 .historyItem {
@@ -9,4 +11,5 @@
 
 .historyItem:not(:first-child)::after {
     content: ">";
+    margin: 0 0.2em;
 }
