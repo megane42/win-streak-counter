@@ -16,7 +16,4 @@
 
 - `npm run build`
 - `npx firebase deploy`
-
-### Deploy only firestore rules
-
-- `npx firebase deploy --only firestore:rules`
+  - or `npx firebase deploy --only firestore:rules`
