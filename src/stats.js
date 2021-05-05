@@ -19,6 +19,7 @@ export default function Stats(props) {
 
   return (
     <div>
+      (
       <span>
         {numOfWin(props.matchResults)}
       </span>
@@ -30,6 +31,7 @@ export default function Stats(props) {
       <span>
         {numOfDraw(props.matchResults)}
       </span>
+      )
     </div>
   )
 }

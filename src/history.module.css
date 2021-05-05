@@ -8,5 +8,5 @@
 }
 
 .historyItem:not(:first-child)::after {
-    content: "->";
+    content: ">";
 }

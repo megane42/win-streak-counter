@@ -5,7 +5,9 @@ import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <div className="webfont">
+      <App />
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
