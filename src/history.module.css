@@ -1,0 +1,12 @@
+.history {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.historyItem {
+    list-style: none;
+}
+
+.historyItem:not(:first-child)::after {
+    content: "->";
+}

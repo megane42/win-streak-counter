@@ -1,0 +1,7 @@
+.row {
+    display: flex;
+}
+
+.winStreak {
+    margin-right: 1em;
+}

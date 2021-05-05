@@ -19,9 +19,17 @@ export default function Stats(props) {
 
   return (
     <div>
-      <div>win: {numOfWin(props.matchResults)}</div>
-      <div>lose: {numOfLose(props.matchResults)}</div>
-      <div>draw: {numOfDraw(props.matchResults)}</div>
+      <span>
+        {numOfWin(props.matchResults)}
+      </span>
+      -
+      <span>
+        {numOfLose(props.matchResults)}
+      </span>
+      -
+      <span>
+        {numOfDraw(props.matchResults)}
+      </span>
     </div>
   )
 }
