@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { subscribe }           from "./realtime_storage"
+import { subscribe }           from "./lib/realtime_storage"
 import AddButton               from "./add_button"
 import WinStreak               from "./win_streak"
 import History                 from "./history"
