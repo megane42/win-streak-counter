@@ -2,8 +2,16 @@
 
 ## Requirements
 
-- Firebase project
-  - [get config from project setting](https://support.google.com/firebase/answer/7015592?ref_topic=6400762) and put it into `.env`
+- `npm install`
+- Setup firebase
+  - Create firebase project
+  - Enable the services:
+    - FireStore
+    - Hosting
+  - Create `Web App` in the project
+  - [Get the Web App's config](https://support.google.com/firebase/answer/7015592?ref_topic=6400762) and put it into `.env`
+  - `npx firebase use --add PROJECT_ID`
+    - Config is saved at `.firebaserc` or `~/.config/configstore/firebase-tools.json`
 
 ## Run dev server
 
@@ -11,8 +19,6 @@
   - patch [this](https://github.com/facebook/create-react-app/pull/10706) to enable HMR using emacs
 
 ## Deploy
-
-### Deploy All
 
 - `npm run build`
 - `npx firebase deploy`
