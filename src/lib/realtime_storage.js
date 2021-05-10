@@ -1,10 +1,10 @@
-import firebase from "./firebase"
+import firebase from './firebase'
 
-const collection = firebase.firestore().collection("matchResults")
+const collection = firebase.firestore().collection('matchResults')
 
 export const subscribe = (handler) => {
   collection
-    .orderBy("createdAt", "desc")
+    .orderBy('createdAt', 'desc')
     .onSnapshot((querySnapshot) => {
       handler(
         querySnapshot.docs.map((x) => {

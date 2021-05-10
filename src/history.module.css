@@ -10,6 +10,6 @@
 }
 
 .historyItem:not(:first-child)::after {
-    content: ">";
+    content: '>';
     margin: 0 0.1em;
 }

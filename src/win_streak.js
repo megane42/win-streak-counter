@@ -1,9 +1,9 @@
-// import styles  from "./win_streak.module.css"
+// import styles  from './win_streak.module.css'
 
 const calcStreak = (matchResults) => {
   let streak = 0
   for (let i = 0; i < matchResults.length; i++) {
-    if (matchResults[i].matchResult !== "win") {
+    if (matchResults[i].matchResult !== 'win') {
       break
     }
     streak++

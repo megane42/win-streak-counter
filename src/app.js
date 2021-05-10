@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
-import { subscribe }           from "./lib/realtime_storage"
-import AddButton               from "./add_button"
-import WinStreak               from "./win_streak"
-import History                 from "./history"
-import Stats                   from "./stats"
-import styles                  from "./app.module.css"
+import { subscribe }           from './lib/realtime_storage'
+import AddButton               from './add_button'
+import WinStreak               from './win_streak'
+import History                 from './history'
+import Stats                   from './stats'
+import styles                  from './app.module.css'
 
 export default function App() {
   const [ matchResults, setMatchResults ] = useState([])
@@ -30,9 +30,9 @@ export default function App() {
         </div>
       </div>
       <div className={styles.controlPanel}>
-        <AddButton matchResult="win"  />
-        <AddButton matchResult="lose" />
-        <AddButton matchResult="draw" />
+        <AddButton matchResult='win'  />
+        <AddButton matchResult='lose' />
+        <AddButton matchResult='draw' />
       </div>
     </div>
   )
