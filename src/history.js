@@ -3,11 +3,11 @@ import Lose   from './lose'
 import Draw   from './draw'
 import styles from './history.module.css'
 
-export default function History(props) {
+export default function History({matchResults, numOfHistory}) {
   const history = []
 
-  for (let i = 0; i < Math.min(props.matchResults.length, props.numOfHistory); i++) {
-    switch (props.matchResults[i].matchResult) {
+  for (let i = 0; i < Math.min(matchResults.length, numOfHistory); i++) {
+    switch (matchResults[i].matchResult) {
       case 'win':
         history.push(
           <li key={`history-item-${i}`} className={styles.historyItem}>

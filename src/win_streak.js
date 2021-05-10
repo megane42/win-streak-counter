@@ -11,10 +11,10 @@ const calcStreak = (matchResults) => {
   return streak
 }
 
-export default function WinStreak(props) {
+export default function WinStreak({matchResults}) {
   return (
     <div>
-      {calcStreak(props.matchResults)} / 5 WIN STREAK
+      {calcStreak(matchResults)} / 5 WIN STREAK
     </div>
   )
 }

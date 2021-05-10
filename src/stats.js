@@ -1,20 +1,20 @@
 import styles from './stats.module.css'
 
-export default function Stats(props) {
-  const numOfWin = (matchResults) => {
-    return matchResults.reduce((num, x) => {
+export default function Stats({matchResults}) {
+  const numOfWin = (results) => {
+    return results.reduce((num, x) => {
       return x.matchResult === "win" ? num + 1 : num
     }, 0)
   }
 
-  const numOfLose = (matchResults) => {
-    return matchResults.reduce((num, x) => {
+  const numOfLose = (results) => {
+    return results.reduce((num, x) => {
       return x.matchResult === "lose" ? num + 1 : num
     }, 0)
   }
 
-  const numOfDraw = (matchResults) => {
-    return matchResults.reduce((num, x) => {
+  const numOfDraw = (results) => {
+    return results.reduce((num, x) => {
       return x.matchResult === "draw" ? num + 1 : num
     }, 0)
   }
@@ -23,15 +23,15 @@ export default function Stats(props) {
     <div>
       (
       <span className={styles.win}>
-        {numOfWin(props.matchResults)}
+        {numOfWin(matchResults)}
       </span>
       -
       <span className={styles.lose}>
-        {numOfLose(props.matchResults)}
+        {numOfLose(matchResults)}
       </span>
       -
       <span className={styles.draw}>
-        {numOfDraw(props.matchResults)}
+        {numOfDraw(matchResults)}
       </span>
       )
     </div>
