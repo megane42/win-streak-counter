@@ -3,12 +3,13 @@
 .webfont {
     font-family: 'Teko', sans-serif;
     font-weight: 600;
-    font-size: 4em;
-    font-style: oblique;
 }
 
 html {
+    --color-main: #FFFFFF;
     --color-win:  #66BB66;
     --color-lose: #BB6666;
     --color-draw: #6666BB;
+    color: var(--color-main);
+    font-size: 5.2em;
 }
