@@ -8,7 +8,7 @@ export default function Fade({children}) {
   useEffect(
     () => {
       setTriggered(false)
-      setTimeout((() => {setTriggered(true)}), 300)
+      setTimeout((() => {setTriggered(true)}), 300) // change state -> wait a bit -> change state (how terrible...)
     },
     [onlyText(children)]
   )
