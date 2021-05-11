@@ -1,0 +1,8 @@
+.beforeTrigger {
+    opacity: 0;
+}
+
+.afterTrigger {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
