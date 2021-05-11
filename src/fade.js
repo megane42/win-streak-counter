@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { onlyText }            from 'react-children-utilities'
 import styles                  from './fade.module.css'
 
 export default function Fade({children}) {
@@ -9,7 +10,7 @@ export default function Fade({children}) {
       setTriggered(false)
       setTimeout((() => {setTriggered(true)}), 300)
     },
-    [children]
+    [onlyText(children)]
   )
 
   return (

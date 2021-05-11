@@ -13,3 +13,15 @@
     content: '>';
     margin: 0 0.1em;
 }
+
+.win {
+    color: var(--color-win)
+}
+
+.lose {
+    color: var(--color-lose)
+}
+
+.draw {
+    color: var(--color-draw)
+}
