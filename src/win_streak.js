@@ -1,4 +1,5 @@
-// import styles  from './win_streak.module.css'
+import styles  from './win_streak.module.css'
+import Fade    from './fade'
 
 const calcStreak = (matchResults) => {
   let streak = 0
@@ -14,7 +15,14 @@ const calcStreak = (matchResults) => {
 export default function WinStreak({matchResults}) {
   return (
     <div>
-      {calcStreak(matchResults)} / 5 WIN STREAK
+      <span className={styles.winStreak}>
+        <Fade>
+          {calcStreak(matchResults)}
+        </Fade>
+      </span>
+      <span>
+        / 5 WIN STREAK
+      </span>
     </div>
   )
 }

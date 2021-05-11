@@ -1,3 +1,4 @@
+import Fade   from './fade'
 import styles from './stats.module.css'
 
 const numOfWin = (matchResults) => {
@@ -22,17 +23,23 @@ export default function Stats({matchResults}) {
   return (
     <div>
       (
-      <span className={styles.win}>
-        {numOfWin(matchResults)}
-      </span>
+      <Fade>
+        <span className={styles.win}>
+          {numOfWin(matchResults)}
+        </span>
+      </Fade>
       -
-      <span className={styles.lose}>
-        {numOfLose(matchResults)}
-      </span>
+      <Fade>
+        <span className={styles.lose}>
+          {numOfLose(matchResults)}
+        </span>
+      </Fade>
       -
-      <span className={styles.draw}>
-        {numOfDraw(matchResults)}
-      </span>
+      <Fade>
+        <span className={styles.draw}>
+          {numOfDraw(matchResults)}
+        </span>
+      </Fade>
       )
     </div>
   )

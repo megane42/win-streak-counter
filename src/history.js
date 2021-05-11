@@ -1,31 +1,35 @@
-import Win    from './win'
-import Lose   from './lose'
-import Draw   from './draw'
+import Fade   from './fade'
 import styles from './history.module.css'
 
-export default function History({matchResults, numOfHistory}) {
-  const history = []
+const calcHistory = (matchResults, numOfHistory) => {
+  let history = []
 
   for (let i = 0; i < Math.min(matchResults.length, numOfHistory); i++) {
     switch (matchResults[i].matchResult) {
       case 'win':
         history.push(
           <li key={`history-item-${i}`} className={styles.historyItem}>
-            <Win />
+            <span className={styles.win}>
+              WIN
+            </span>
           </li>
         )
         break
       case 'lose':
         history.push(
           <li key={`history-item-${i}`} className={styles.historyItem}>
-            <Lose />
+            <span className={styles.lose}>
+              LOSE
+            </span>
           </li>
         )
         break
       case 'draw':
         history.push(
           <li key={`history-item-${i}`} className={styles.historyItem}>
-            <Draw />
+            <span className={styles.draw}>
+              DRAW
+            </span>
           </li>
         )
         break
@@ -33,9 +37,15 @@ export default function History({matchResults, numOfHistory}) {
     }
   }
 
+  return history
+}
+
+export default function History({matchResults, numOfHistory}) {
   return (
-    <ul className={styles.history}>
-      {history}
-    </ul>
+    <Fade>
+      <ul className={styles.history}>
+        {calcHistory(matchResults, numOfHistory)}
+      </ul>
+    </Fade>
   )
 }
