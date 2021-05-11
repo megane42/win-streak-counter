@@ -1,6 +1,7 @@
 import Win    from './win'
 import Lose   from './lose'
 import Draw   from './draw'
+import Fade   from './fade'
 import styles from './history.module.css'
 
 export default function History({matchResults, numOfHistory}) {
@@ -34,8 +35,10 @@ export default function History({matchResults, numOfHistory}) {
   }
 
   return (
-    <ul className={styles.history}>
-      {history}
-    </ul>
+    <Fade>
+      <ul className={styles.history}>
+        {history}
+      </ul>
+    </Fade>
   )
 }
