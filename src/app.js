@@ -29,10 +29,16 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div className={styles.controlPanel}>
-        <AddButton matchResult='win'  />
-        <AddButton matchResult='lose' />
-        <AddButton matchResult='draw' />
+      <div>
+        <span className={styles.addButton}>
+          <AddButton matchResult='win' />
+        </span>
+        <span className={styles.addButton}>
+          <AddButton matchResult='lose' />
+        </span>
+        <span className={styles.addButton}>
+          <AddButton matchResult='draw' />
+        </span>
       </div>
     </div>
   )

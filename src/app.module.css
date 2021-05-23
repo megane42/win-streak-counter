@@ -1,3 +1,7 @@
+.main {
+    margin-bottom: 0.8em;
+}
+
 .row {
     display: flex;
 }
@@ -7,5 +11,9 @@
 }
 
 .stats {
+    margin-right: 0.4em;
+}
+
+.addButton {
     margin-right: 0.4em;
 }
