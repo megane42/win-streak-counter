@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import queryString             from 'query-string'
+
 import { subscribe }           from './lib/realtime_storage'
 import AddButton               from './add_button'
 import ToggleBackgroundButton  from './toggle_background_button'
@@ -14,12 +16,14 @@ export default function App() {
 
   const [ backgroundTransparent, setBackgroundTransparent ] = useState(true)
 
+  const targetStreak = queryString.parse(window.location.search).target || 5
+
   return (
     <div className={backgroundTransparent ? styles.backgroundTransparent : styles.backgroundOpaque }>
       <div className={styles.main}>
         <div className={styles.row}>
           <div className={styles.winStreak}>
-            <WinStreak matchResults={matchResults} />
+            <WinStreak matchResults={matchResults} targetStreak={targetStreak}/>
           </div>
         </div>
 

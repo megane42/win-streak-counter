@@ -12,7 +12,7 @@ const calcStreak = (matchResults) => {
   return streak
 }
 
-export default function WinStreak({matchResults}) {
+export default function WinStreak({matchResults, targetStreak}) {
   return (
     <div>
       <span className={styles.winStreak}>
@@ -21,7 +21,7 @@ export default function WinStreak({matchResults}) {
         </Fade>
       </span>
       <span>
-        / 5 WIN STREAK
+        / {targetStreak} WIN STREAK
       </span>
     </div>
   )

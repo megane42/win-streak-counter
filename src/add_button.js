@@ -3,7 +3,7 @@ import styles  from './add_button.module.css'
 
 export default function AddButton({matchResult}) {
   return (
-    <a className={styles.button} onClick={() => { add(matchResult) }}>
+    <a href='#' className={styles.button} onClick={() => { add(matchResult) }}>
       {matchResult}
     </a>
   )
