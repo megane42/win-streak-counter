@@ -21,11 +21,11 @@ export default function App() {
         </div>
 
         <div className={`${styles.row} ${styles.historyAndStats}`}>
-          <div className={styles.history}>
-            <History matchResults={matchResults} numOfHistory={10} />
-          </div>
           <div className={styles.stats}>
             <Stats matchResults={matchResults} />
+          </div>
+          <div className={styles.history}>
+            <History matchResults={matchResults} numOfHistory={10} />
           </div>
         </div>
       </div>
