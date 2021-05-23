@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { subscribe }           from './lib/realtime_storage'
 import AddButton               from './add_button'
+import ToggleBackgroundButton  from './toggle_background_button'
 import WinStreak               from './win_streak'
 import History                 from './history'
 import Stats                   from './stats'
@@ -11,8 +12,10 @@ export default function App() {
 
   useEffect(() => { subscribe(setMatchResults) }, [])
 
+  const [ backgroundTransparent, setBackgroundTransparent ] = useState(true)
+
   return (
-    <div>
+    <div className={backgroundTransparent ? styles.backgroundTransparent : styles.backgroundOpaque }>
       <div className={styles.main}>
         <div className={styles.row}>
           <div className={styles.winStreak}>
@@ -38,6 +41,9 @@ export default function App() {
         </span>
         <span className={styles.addButton}>
           <AddButton matchResult='draw' />
+        </span>
+        <span className={styles.addButton}>
+          <ToggleBackgroundButton onClick={ () => { setBackgroundTransparent(!backgroundTransparent) } } />
         </span>
       </div>
     </div>
