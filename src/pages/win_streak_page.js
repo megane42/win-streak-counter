@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react'
 import queryString             from 'query-string'
 
 import { subscribe }           from '../lib/realtime_storage'
-import AddButton               from '../add_button'
-import ToggleBackgroundButton  from '../toggle_background_button'
-import WinStreak               from '../win_streak'
-import History                 from '../history'
-import Stats                   from '../stats'
+import AddButton               from '../components/add_button'
+import ToggleBackgroundButton  from '../components/toggle_background_button'
+import WinStreak               from '../components/win_streak'
+import History                 from '../components/history'
+import Stats                   from '../components/stats'
 import styles                  from './win_streak_page.module.css'
 
 export default function WinStreakPage() {
