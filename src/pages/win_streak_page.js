@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import queryString             from 'query-string'
 
-import { subscribe }           from '../lib/realtime_storage'
+import { subscribe }           from '../lib/match_results_storage'
 import AddMatchResultButton    from '../components/add_match_result_button'
 import ToggleBackgroundButton  from '../components/toggle_background_button'
 import WinStreak               from '../components/win_streak'
