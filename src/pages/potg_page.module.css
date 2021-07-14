@@ -1,0 +1,28 @@
+.backgroundOpaque {
+    background: #000;
+}
+
+.backgroundTransparent {
+    background: transparent;
+}
+
+
+.main {
+    margin-bottom: 0.8em;
+}
+
+.row {
+    display: flex;
+}
+
+.historyAndStats {
+    font-size: 0.6em;
+}
+
+.stats {
+    margin-right: 0.4em;
+}
+
+.addButton {
+    margin-right: 0.4em;
+}
