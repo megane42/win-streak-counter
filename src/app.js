@@ -1,55 +1,19 @@
-import { useState, useEffect } from 'react'
-import queryString             from 'query-string'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
-import { subscribe }           from './lib/realtime_storage'
-import AddButton               from './add_button'
-import ToggleBackgroundButton  from './toggle_background_button'
-import WinStreak               from './win_streak'
-import History                 from './history'
-import Stats                   from './stats'
-import styles                  from './app.module.css'
+import WinStreakPage from "./pages/win_streak_page"
 
 export default function App() {
-  const [ matchResults, setMatchResults ] = useState([])
-
-  useEffect(() => { subscribe(setMatchResults) }, [])
-
-  const [ backgroundTransparent, setBackgroundTransparent ] = useState(true)
-
-  const targetStreak = queryString.parse(window.location.search).target || 5
-
   return (
-    <div className={backgroundTransparent ? styles.backgroundTransparent : styles.backgroundOpaque }>
-      <div className={styles.main}>
-        <div className={styles.row}>
-          <div className={styles.winStreak}>
-            <WinStreak matchResults={matchResults} targetStreak={targetStreak}/>
-          </div>
-        </div>
-
-        <div className={`${styles.row} ${styles.historyAndStats}`}>
-          <div className={styles.stats}>
-            <Stats matchResults={matchResults} />
-          </div>
-          <div className={styles.history}>
-            <History matchResults={matchResults} numOfHistory={10} />
-          </div>
-        </div>
-      </div>
-      <div>
-        <span className={styles.addButton}>
-          <AddButton matchResult='win' />
-        </span>
-        <span className={styles.addButton}>
-          <AddButton matchResult='lose' />
-        </span>
-        <span className={styles.addButton}>
-          <AddButton matchResult='draw' />
-        </span>
-        <span className={styles.addButton}>
-          <ToggleBackgroundButton onClick={ () => { setBackgroundTransparent(!backgroundTransparent) } } />
-        </span>
-      </div>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/">
+          <WinStreakPage />
+        </Route>
+      </Switch>
+    </Router>
   )
 }
