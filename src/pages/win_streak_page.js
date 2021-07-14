@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import queryString             from 'query-string'
 
 import { subscribe }           from '../lib/realtime_storage'
-import AddButton               from '../components/add_button'
+import AddMatchResultButton    from '../components/add_match_result_button'
 import ToggleBackgroundButton  from '../components/toggle_background_button'
 import WinStreak               from '../components/win_streak'
 import History                 from '../components/history'
@@ -38,13 +38,13 @@ export default function WinStreakPage() {
       </div>
       <div>
         <span className={styles.addButton}>
-          <AddButton matchResult='win' />
+          <AddMatchResultButton matchResult='win' />
         </span>
         <span className={styles.addButton}>
-          <AddButton matchResult='lose' />
+          <AddMatchResultButton matchResult='lose' />
         </span>
         <span className={styles.addButton}>
-          <AddButton matchResult='draw' />
+          <AddMatchResultButton matchResult='draw' />
         </span>
         <span className={styles.addButton}>
           <ToggleBackgroundButton onClick={ () => { setBackgroundTransparent(!backgroundTransparent) } } />
