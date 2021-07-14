@@ -17,7 +17,7 @@ export const subscribe = (handler) => {
     })
 }
 
-export const addMatchResult = (matchResult) => {
+export const add = (matchResult) => {
   collection
     .add({
       matchResult: matchResult,
