@@ -6,5 +6,10 @@ service cloud.firestore {
       allow delete: if true;
       allow create: if request.resource.data.keys().hasOnly(["matchResult", "createdAt"]);
     }
+    match /potgResults/{matchResultId} {
+      allow read:  if true;
+      allow delete: if true;
+      allow create: if request.resource.data.keys().hasOnly(["createdAt"]);
+    }
   }
 }
