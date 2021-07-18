@@ -9,6 +9,9 @@ export default function HomePage() {
           <Link to="/win_streak" className={styles.link}>WinStreak</Link>
         </li>
         <li>
+          <Link to="/win_total" className={styles.link}>WinTotal</Link>
+        </li>
+        <li>
           <Link to="/potg" className={styles.link}>POTG</Link>
         </li>
       </ul>
