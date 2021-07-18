@@ -6,6 +6,7 @@ import {
 
 import HomePage      from "./pages/home_page"
 import WinStreakPage from "./pages/win_streak_page"
+import WinTotalPage  from "./pages/win_total_page"
 import PotgPage      from "./pages/potg_page"
 
 export default function App() {
@@ -14,6 +15,9 @@ export default function App() {
       <Switch>
         <Route path="/win_streak">
           <WinStreakPage />
+        </Route>
+        <Route path="/win_total">
+          <WinTotalPage />
         </Route>
         <Route path="/potg">
           <PotgPage />
